@@ -28,6 +28,6 @@ export const next = state => {
     });
 };
 
-export const vote = (state, entry) => state.updateIn(['vote', 'tally', entry], 0, tally => tally + 1);
+export const vote = (voteState, entry) => voteState.updateIn(['tally', entry], 0, tally => tally + 1);
 
 export const INITIAL_STATE = Map();
